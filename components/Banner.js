@@ -43,8 +43,8 @@ export default function Banner() {
 
         article {
           position: absolute;
-          top: 44%;
-          left: 5%;
+          top: 40%;
+          /* left: 5%; */
           width: 47%;
         }
 

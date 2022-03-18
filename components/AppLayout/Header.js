@@ -88,7 +88,6 @@ export default function Header() {
           color: #323232;
           text-transform: capitalize;
           white-space: normal;
-          font-size: 19px;
           font-weight: 700;
           line-height: initial;
         }

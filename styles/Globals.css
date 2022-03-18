@@ -1,4 +1,4 @@
-:root{
+:root {
   --color-primary: #02b8bf;
 }
 
@@ -20,7 +20,7 @@ a {
   margin: 0;
   padding: 0;
   color: #6B6B6B;
-  font-size: 1.145rem;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.5em;
 }
@@ -40,10 +40,11 @@ ul {
 .container {
   width: 90%;
   margin: 0 auto;
+  max-width: 1140px;
 }
 
-.misCosas {
-  display: flex;
-  flex-direction: row;
-
+.spanTitle {
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: 500;
 }

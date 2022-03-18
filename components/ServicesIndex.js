@@ -6,7 +6,7 @@ export default function ServicesIndex() {
       <section>
         <div className="container">
           <article>
-            <span>Our services</span>
+            <span className="spanTitle">Our services</span>
 
             <h2>Professional Cleaning Service</h2>
             <p>
@@ -21,12 +21,6 @@ export default function ServicesIndex() {
       </section>
 
       <style jsx>{`
-        span {
-          color: var(--color-primary);
-          font-size: 24px;
-          font-weight: 500;
-        }
-
         p {
           color: #333333;
         }

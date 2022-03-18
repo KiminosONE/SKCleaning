@@ -68,18 +68,18 @@ export default function AboutUsIndex() {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          padding: 5% 0;
+          padding: 0 0 5% 0;
           align-items: end;
         }
 
         .cont_img_aboutus_index {
-          width: 35%;
+          width: 34%;
           border-radius: 140px;
           overflow: hidden;
         }
 
         article {
-          width: 39%;
+          width: 40%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -120,7 +120,7 @@ export default function AboutUsIndex() {
         }
 
         article > div > p:first-child {
-          margin: 0 6% 0 0;
+          margin: 0 4% 0 0;
         }
 
         p {
