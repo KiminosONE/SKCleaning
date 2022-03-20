@@ -1,7 +1,12 @@
 import Head from "next/head"
 import Header from "./Header"
 
-export default function AppLayout({ children, title, description }) {
+export default function AppLayout({
+  children,
+  title,
+  description,
+  dataHeader,
+}) {
   return (
     <>
       <Head>
@@ -10,7 +15,7 @@ export default function AppLayout({ children, title, description }) {
         <link rel="icon" href="/images/icons/logoEmpresa/skLogo.png" />
       </Head>
 
-      <Header />
+      <Header style={dataHeader} />
 
       <main>{children}</main>
 

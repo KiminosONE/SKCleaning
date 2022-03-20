@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-export default function Header() {
+export default function Header({ style }) {
   const [isVisible, setIsVisible] = useState(false)
 
   const changeback = () => {
@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={isVisible ? "header_small" : ""}>
+      <header className={isVisible ? "header_small" : ""} style={{ ...style }}>
         <div className="container">
           <div className={isVisible ? "cont_logo small" : "cont_logo"}>
             <Link href="/">
@@ -36,7 +36,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/aboutUs">
                   <a>About Us</a>
                 </Link>
               </li>
@@ -93,7 +93,7 @@ export default function Header() {
         }
 
         a:hover {
-          color: red;
+          color: var(--color-primary);
         }
 
         img {

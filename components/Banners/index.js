@@ -1,17 +1,19 @@
-import ButtonPrimary from "./ButtonPrimary"
+import ButtonPrimary from "components/ButtonPrimary"
+import ShapeDivider from "components/ShapeDivider"
 
-export default function Banner() {
+export default function Banners({ image }) {
   return (
     <>
       <section>
         <div className="cont_img_banner">
-          <img src="/images/revo-img-slider2-update.jpg" />
+          <img src={image} />
+          <ShapeDivider />
         </div>
 
         <div className="container">
           <article>
             <span className="onTitle">
-              spanroudly Serving Small to Large Size Facilities{" "}
+              spanroudly Serving Small to Large Size Facilities
             </span>
 
             <h1>SK Cleaning services LLC</h1>
@@ -25,13 +27,14 @@ export default function Banner() {
       </section>
 
       <style jsx>{`
+        /*sdfjaildfjiasjdfilsadjfiljslidjilsjil */
         .cont_img_banner {
           width: 100%;
           height: 850px;
           overflow: hidden;
         }
 
-        .cont_img_banner > img {
+        .cont_img_banner > img:first-child {
           height: 100%;
           width: 100%;
           object-fit: cover;
