@@ -7,19 +7,63 @@ export default function Footer() {
   const labelAboutFooter = (texto, position) => {
     if (router.pathname === "/aboutUs") {
       return (
-        <a
-          onClick={() => {
-            moveScroll(position)
-          }}
-        >
-          {texto}
-        </a>
+        <>
+          <li>
+            <a
+              onClick={() => {
+                moveScroll(position)
+              }}
+            >
+              {texto}
+            </a>
+          </li>
+
+          <style jsx>{`
+            li {
+              padding: 8px 0;
+            }
+
+            li a {
+              transition: all 0.3s linear;
+              position: relative;
+              left: 0;
+            }
+
+            li:hover a {
+              left: 15px;
+              font-weight: 400;
+              color: var(--color-primary);
+            }
+          `}</style>
+        </>
       )
     } else {
       return (
-        <Link href={"/aboutUs?position=" + position}>
-          <a>{texto}</a>
-        </Link>
+        <>
+          <li>
+            <Link href={"/aboutUs?position=" + position}>
+              <a>{texto}</a>
+            </Link>
+          </li>
+
+          <style jsx>{`
+            li {
+              padding: 8px 0;
+            }
+
+            li a {
+              transition: all 0.3s linear;
+              position: relative;
+              left: 0;
+            }
+
+            li:hover a {
+              left: 15px;
+              font-weight: 400;
+              color: var(--color-primary);
+            }
+          `}</style>
+        </>
       )
     }
   }
@@ -159,9 +203,9 @@ l0 -253 315 0 c173 0 315 -3 315 -7 0 -5 -18 -145 -40 -312 -22 -168 -40 -308
           <article className="list_footer">
             <h6>About Us</h6>
             <ul>
-              <li>{labelAboutFooter("Our history", 400)}</li>
-              <li>{labelAboutFooter("Our values", 900)}</li>
-              <li>{labelAboutFooter("Our process", 400)}</li>
+              {labelAboutFooter("Our history", 500)}
+              {labelAboutFooter("Our values", 1000)}
+              {labelAboutFooter("Our process", 1500)}
             </ul>
           </article>
 
@@ -226,18 +270,22 @@ l0 -253 315 0 c173 0 315 -3 315 -7 0 -5 -18 -145 -40 -312 -22 -168 -40 -308
             margin: 0 0 20px 0;
           }
 
+          .list_footer {
+            width: 11%;
+          }
+
           .list_footer ul li {
             padding: 8px 0;
           }
 
           .list_footer ul li a {
-            position: relative;
             transition: all 0.3s linear;
+            position: relative;
             left: 0;
           }
 
           .list_footer ul li:hover a {
-            left: 20px;
+            left: 15px;
             font-weight: 400;
             color: var(--color-primary);
           }
