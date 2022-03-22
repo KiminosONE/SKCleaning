@@ -1,13 +1,13 @@
-import AboutUsIndex from "components/AboutUsIndex"
+import AboutUsIndex from "components/IndexComponents/AboutUsIndex"
 import AppLayout from "components/AppLayout"
 import Banners from "components/Banners"
-import ServicesIndex from "components/ServicesIndex"
-import TestimonialIndex from "components/TestimonialIndex"
+import ServicesIndex from "components/IndexComponents/ServicesIndex"
+import TestimonialIndex from "components/IndexComponents/TestimonialIndex"
 
 export default function Home() {
   return (
     <AppLayout
-      title="home"
+      title="Home"
       description="pagina de inicio del citio web descripcion"
     >
       <Banners image="/images/Banners/revo-img-slider2-update.jpg" />

@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react"
-import CardTestimonial from "./CardTestimonial"
-
-var cont = 1
+import CardTestimonial from "../CardTestimonial"
 
 export default function TestimonialIndex() {
   const [isActivo, setActivo] = useState(1)
@@ -15,6 +13,8 @@ export default function TestimonialIndex() {
       testi: "",
     },
   ])
+
+  var cont = 1
 
   useEffect(() => {
     getStaticProps()
@@ -58,7 +58,7 @@ export default function TestimonialIndex() {
   return (
     <>
       <section>
-        <div className="container">
+        <section className="container">
           <div>
             <span className="spanTitle">Testimonials</span>
             <h2>Why they love us</h2>
@@ -88,15 +88,15 @@ export default function TestimonialIndex() {
               <p>{testi[isActivo - 1].testi}</p>
             </div>
           </article>
-        </div>
+        </section>
       </section>
 
       <style jsx>{`
-        .container {
+        section > section {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          padding: 4% 0;
+          padding: 5% 0;
         }
 
         .container > div:first-child {

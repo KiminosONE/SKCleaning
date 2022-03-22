@@ -1,10 +1,10 @@
-import Carousel from "./Carousel"
+import Carousel from "../Carousel"
 
 export default function ServicesIndex() {
   return (
     <>
       <section>
-        <div className="container">
+        <section className="container">
           <article>
             <span className="spanTitle">Our services</span>
 
@@ -17,7 +17,7 @@ export default function ServicesIndex() {
           <div>
             <Carousel />
           </div>
-        </div>
+        </section>
       </section>
 
       <style jsx>{`
@@ -27,13 +27,14 @@ export default function ServicesIndex() {
 
         section {
           background-color: #f6f6f6;
-          padding: 4% 0;
         }
-        .container {
+
+        section > section {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          padding: 5% 0;
         }
 
         article {

@@ -1,52 +1,56 @@
-import ButtonPrimary from "./ButtonPrimary"
+import ButtonPrimary from "../ButtonPrimary"
 import Image from "next/image"
 
 export default function AboutUsIndex() {
   const stylesButton = {
     width: "100%",
     "text-align": "center",
-    color: "#333333",
   }
 
   return (
     <>
-      <section className="container">
-        <div className="cont_img_aboutus_index">
-          <img src="/images/perfil_sandra.png" />
-        </div>
-
-        <article>
-          <h2>About Us</h2>
-          <div className="cont_text_aboutUs_index">
-            <p>
-              SK Cleaning Services LLC is a woman-owned small business founded.
-              Owned and managed by Sandra Cuentas Galvan. Sandra is a mother of
-              two with five years of experience working as a full time
-              housekeeper for large cleaning providers.
-            </p>
-            <p>
-              She founded SK Cleaning Services to provide quality housekeeping
-              and cleaning services in the greater Pennsylvania area.
-            </p>
+      <section>
+        <section className="container">
+          <div className="cont_img_aboutus_index">
+            <img src="/images/perfil_sandra.png" />
           </div>
-          <div>
-            <div className="cont_imgTxt_aboutUs_index">
-              <Image
-                src="/images/firma.png"
-                layout="responsive"
-                width="1000"
-                height="408"
-              />
+
+          <article>
+            <h2>About Us</h2>
+            <div className="cont_text_aboutUs_index">
+              <p>
+                SK Cleaning Services LLC is a woman-owned small business
+                founded. Owned and managed by Sandra Cuentas Galvan. Sandra is a
+                mother of two with five years of experience working as a full
+                time housekeeper for large cleaning providers.
+              </p>
+              <p>
+                She founded SK Cleaning Services to provide quality housekeeping
+                and cleaning services in the greater Pennsylvania area.
+              </p>
             </div>
-            <span>Sandra Cuentas Galván, CEO</span>
-          </div>
-        </article>
+            <div>
+              <div className="cont_imgTxt_aboutUs_index">
+                <Image
+                  src="/images/firma.png"
+                  layout="responsive"
+                  width="1000"
+                  height="408"
+                />
+              </div>
+              <span>Sandra Cuentas Galván, CEO</span>
+            </div>
+          </article>
 
-        <div className="cont_buttons_about">
           <ul>
             <li>
-              <ButtonPrimary link="/" style={stylesButton}>
+              <ButtonPrimary link="/aboutUs?position=400" style={stylesButton}>
                 OUR HISTORY
+              </ButtonPrimary>
+            </li>
+            <li>
+              <ButtonPrimary link="/aboutUs?position=900" style={stylesButton}>
+                OUR VALUES
               </ButtonPrimary>
             </li>
             <li>
@@ -54,17 +58,12 @@ export default function AboutUsIndex() {
                 OUR PROCESS
               </ButtonPrimary>
             </li>
-            <li>
-              <ButtonPrimary link="/" style={stylesButton}>
-                OUR VALUES
-              </ButtonPrimary>
-            </li>
           </ul>
-        </div>
+        </section>
       </section>
 
       <style jsx>{`
-        section {
+        section > section {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -86,11 +85,8 @@ export default function AboutUsIndex() {
           height: 100%;
         }
 
-        .cont_buttons_about {
+        ul {
           width: 19%;
-          display: flex;
-          flex-direction: column;
-          justify-content: end;
         }
 
         .behindImage {

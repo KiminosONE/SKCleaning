@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Footer from "./Footer"
 import Header from "./Header"
 
 export default function AppLayout({
@@ -10,7 +11,7 @@ export default function AppLayout({
   return (
     <>
       <Head>
-        <title>NameApp - {title}</title>
+        <title>SK Cleaning - {title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="/images/icons/logoEmpresa/skLogo.png" />
       </Head>
@@ -19,13 +20,11 @@ export default function AppLayout({
 
       <main>{children}</main>
 
-      <footer>
-        <div className="container">foooter</div>
-      </footer>
+      <Footer />
     </>
   )
 }
 
 AppLayout.defaultProps = {
-  title: "hlaytftyf",
+  title: "Home",
 }

@@ -1,11 +1,11 @@
 import ShapeDivider from "components/ShapeDivider"
 
-export default function BannerInternal({ image }) {
+export default function BannerInternal({ imgBanner, text }) {
   return (
     <>
       <section>
         <div className="cont_img_banner">
-          <img src={image} />
+          <img src={imgBanner} />
           <ShapeDivider />
         </div>
 
@@ -15,14 +15,11 @@ export default function BannerInternal({ image }) {
               <span className="onTitle">8 Years of Experience</span>
 
               <h1>About Our Company</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-                quod iusto itaque eum numquam rem dolore officiis iure dolor.
-              </p>
+              <p>{text}</p>
             </article>
 
             <div className="img_banner_top">
-              <img src="/images/pexels-cottonbro-4107278.jpg" />
+              <img src="/images/pexels-liliana-drew-9462220.jpg" />
             </div>
           </div>
         </div>
@@ -40,6 +37,7 @@ export default function BannerInternal({ image }) {
         section {
           height: 550px;
           position: relative;
+          margin: 0 0 4% 0;
         }
 
         .cont_img_banner {
@@ -59,8 +57,8 @@ export default function BannerInternal({ image }) {
         }
 
         .img_banner_top {
-          width: 28%;
-          margin: 3% 10% 0 0;
+          width: 30%;
+          margin: 1% 10% 0 0;
           height: 420px;
           border-radius: 20px;
           overflow: hidden;

@@ -29,7 +29,7 @@ export default function CardSlider({ srcImg, title }) {
         }
 
         .cardSlider > div {
-          margin: 5%;
+          margin: 0 5%;
           background-color: white;
           padding: 10% 8%;
         }

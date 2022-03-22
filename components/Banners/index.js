@@ -1,5 +1,4 @@
 import ButtonPrimary from "components/ButtonPrimary"
-import ShapeDivider from "components/ShapeDivider"
 
 export default function Banners({ image }) {
   return (
@@ -7,7 +6,6 @@ export default function Banners({ image }) {
       <section>
         <div className="cont_img_banner">
           <img src={image} />
-          <ShapeDivider />
         </div>
 
         <div className="container">
@@ -18,8 +16,8 @@ export default function Banners({ image }) {
 
             <h1>SK Cleaning services LLC</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quod
-              iusto itaque eum numquam rem dolore officiis iure dolor.
+              SK Cleaning Services provides reliable and thorough residential
+              and commercial cleaning services.
             </p>
             <ButtonPrimary link="/">READ MORE</ButtonPrimary>
           </article>
@@ -27,7 +25,6 @@ export default function Banners({ image }) {
       </section>
 
       <style jsx>{`
-        /*sdfjaildfjiasjdfilsadjfiljslidjilsjil */
         .cont_img_banner {
           width: 100%;
           height: 850px;
