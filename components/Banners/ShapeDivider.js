@@ -30,7 +30,7 @@ export default function ShapeDivider() {
       <style jsx>{`
         .banner-waves {
           position: absolute;
-          bottom: 0;
+          bottom: -1px;
           left: 0;
           width: 100%;
           overflow: hidden;

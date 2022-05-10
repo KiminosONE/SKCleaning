@@ -81,7 +81,12 @@ export default function Footer() {
         <section className="container">
           <article className="social_footer">
             <div>
-              <img src="/images/icons/logoEmpresa/skLogoTexto.png" />
+              <Link href="/">
+                <img
+                  src="/images/icons/logoEmpresa/skLogoTexto.png"
+                  alt="Logo skCleaning"
+                />
+              </Link>
             </div>
             <p>
               The goal of SK Cleaning Services is to earn the loyalty of its
@@ -188,12 +193,12 @@ l0 -253 315 0 c173 0 315 -3 315 -7 0 -5 -18 -145 -40 -312 -22 -168 -40 -308
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/services">
                   <a>Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/contactUs">
                   <a>Contact Us</a>
                 </Link>
               </li>
@@ -216,11 +221,13 @@ l0 -253 315 0 c173 0 315 -3 315 -7 0 -5 -18 -145 -40 -312 -22 -168 -40 -308
             </p>
 
             <p>
-              <span>Tel:</span> 215 954 1997
+              <a href="tel:+12159541997">Tel: 215 954 1997</a>
             </p>
 
             <p>
-              <span>sandra@skcleaningllc.com</span>
+              <a href="mailto:sandra@skcleaningllc.com">
+                sandra@skcleaningllc.com
+              </a>
             </p>
           </article>
         </section>
@@ -298,7 +305,7 @@ l0 -253 315 0 c173 0 315 -3 315 -7 0 -5 -18 -145 -40 -312 -22 -168 -40 -308
             margin: 0 0 15px 0;
           }
 
-          .office_footer span {
+          .office_footer a {
             color: var(--color-primary);
           }
         `}

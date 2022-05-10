@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import CardTestimonial from "../CardTestimonial"
+import CardTestimonial from "./CardTestimonial"
 
 export default function TestimonialIndex() {
   const [isActivo, setActivo] = useState(1)

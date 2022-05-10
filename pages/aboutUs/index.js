@@ -1,5 +1,7 @@
 import AppLayout from "components/AppLayout"
-import BannerInternal from "components/Banners/BannerInternal"
+import BannerAlfa from "components/Banners/BannerAlfa"
+import ImgOnBanner from "components/Banners/ImgOnBanner"
+import ShapeDivider from "components/Banners/ShapeDivider"
 import SectionAboutUs from "components/SectionAboutUs"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
@@ -22,10 +24,20 @@ export default function AboutUs() {
       description="pagina de inicio del citio web descripcion"
       dataHeader={{ "background-color": "#ffff" }}
     >
-      <BannerInternal
-        imgBanner="/images/Banners/blurry-gradient-haikei.png"
-        text="SK Cleaning Services LLC is a woman-owned small business founded. Owned and managed by Sandra Cuentas Galvan."
+      <BannerAlfa
+        props={{
+          imgBanner: "/images/Banners/blurry-gradient-haikei.png",
+          shapeDivider: <ShapeDivider />,
+          onTitle: "8 Years of Experience",
+          h1Banner: "About Our Company",
+          textBanner:
+            "SK Cleaning Services LLC is a woman-owned small business founded. Owned and managed by Sandra Cuentas Galvan.",
+          componentOnBanner: (
+            <ImgOnBanner src={"/images/pexels-liliana-drew-9462220.jpg"} />
+          ),
+        }}
       />
+
       <SectionAboutUs
         img="/images/pexels-polina-tankilevitch-4440627.jpg"
         data={[

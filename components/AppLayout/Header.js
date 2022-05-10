@@ -41,12 +41,12 @@ export default function Header({ style }) {
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/services">
                   <a>Services</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/contactUs">
                   <a>Contact Us </a>
                 </Link>
               </li>
@@ -104,6 +104,7 @@ export default function Header({ style }) {
         .cont_logo {
           width: 10%;
           transition: all 0.3s linear;
+          cursor: pointer;
         }
 
         .cont_logo.small {
