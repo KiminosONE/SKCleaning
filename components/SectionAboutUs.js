@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default function SectionAboutUs({ direction, img, data }) {
-  const [getdata, setData] = useState(data[0].texts)
+  const [getdata] = useState(data[0].texts)
 
   return (
     <>

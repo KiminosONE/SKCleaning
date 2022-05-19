@@ -49,9 +49,6 @@ export default function ServicePackages() {
     - Baseboards`,
   ]
 
-  // https://open.spotify.com/track/4OQCyvVtGQFRDzuatXTiAN?si=1eadd06ff9644656
-  // https://open.spotify.com/track/5cxE8QZLrhP3OQjslZ8Lux?si=b8be4a392cb84ef7
-
   return (
     <>
       <section>

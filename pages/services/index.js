@@ -3,6 +3,7 @@ import BannerAlfa from "components/Banners/BannerAlfa"
 import ImgOnBanner from "components/Banners/ImgOnBanner"
 import ShapeDivider from "components/Banners/ShapeDivider"
 import ButtonPrimary from "components/ButtonPrimary"
+import ServiceCards from "components/ServiceCards"
 import ServicePackages from "components/ServicePackages"
 export default function Services() {
   return (
@@ -37,7 +38,7 @@ export default function Services() {
             <ImgOnBanner
               src={"/images/pexels-karolina-grabowska-4239031.jpg"}
               style={{
-                margin: "3% 0 0 0",
+                "margin-right": "0",
               }}
             />
           ),
@@ -45,6 +46,7 @@ export default function Services() {
       />
 
       <ServicePackages />
+      <ServiceCards />
     </AppLayout>
   )
 }
