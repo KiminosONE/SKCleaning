@@ -1,6 +1,6 @@
 import Carousel from "../Carousel"
 
-export default function ServicesIndex() {
+export default function ServicesIndex({ Services }) {
   return (
     <>
       <section>
@@ -15,7 +15,7 @@ export default function ServicesIndex() {
             </p>
           </article>
           <div>
-            <Carousel />
+            <Carousel Services={Services} />
           </div>
         </section>
       </section>
@@ -46,7 +46,7 @@ export default function ServicesIndex() {
         }
 
         .container > div {
-          width: 53%;
+          width: 55%;
         }
       `}</style>
     </>

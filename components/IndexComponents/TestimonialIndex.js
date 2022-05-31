@@ -1,6 +1,13 @@
 import { useState, useEffect } from "react"
 import CardTestimonial from "./CardTestimonial"
 
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:3000/api/testimonios")
+  const data = await res.json()
+
+  console.log(data)
+}
+
 export default function TestimonialIndex() {
   const [isActivo, setActivo] = useState(1)
   const [intervalId, setIntervalId] = useState(0)

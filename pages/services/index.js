@@ -5,7 +5,7 @@ import ShapeDivider from "components/Banners/ShapeDivider"
 import ButtonPrimary from "components/ButtonPrimary"
 import ServiceCards from "components/ServiceCards"
 import ServicePackages from "components/ServicePackages"
-export default function Services() {
+export default function Services({ Services }) {
   return (
     <AppLayout
       title="Services"
@@ -45,8 +45,23 @@ export default function Services() {
         }}
       />
 
-      <ServicePackages />
-      <ServiceCards />
+      <ServicePackages Services={Services} />
+      <ServiceCards Services={Services} />
     </AppLayout>
   )
+}
+
+export async function getStaticProps() {
+  try {
+    const res = await fetch(`http://localhost:3000/api/servicesList`)
+    const data = await res.json()
+
+    return {
+      props: {
+        Services: data,
+      },
+    }
+  } catch (error) {
+    console.log(error)
+  }
 }

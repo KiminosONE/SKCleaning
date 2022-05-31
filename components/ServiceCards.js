@@ -1,28 +1,4 @@
-export default function ServiceCards() {
-  const services = [
-    `Clean counters, sinks, faucets
-    Clean appliance exteriors
-    Clean inside microwaves
-    Clean stove top
-    Wash floor`,
-    `Scour sink, tub and toilet
-    Clean tile as needed
-    Clean mirrors
-    Vacuum throw rugs
-    Wash floor`,
-    `Dust
-    Wash floors
-    Vacuum carpets
-    Change beds`,
-    `Weekly
-    Bi-Weekly
-    Monthly
-    One time
-    Move In / Move Out
-    Real Estate Turnover
-    Special Requests`,
-  ]
-
+export default function ServiceCards({ Services }) {
   return (
     <>
       <section>
@@ -32,10 +8,10 @@ export default function ServiceCards() {
               <div>
                 <h3>Kitchen</h3>
                 <ul>
-                  {services[0].split("\n").map((item) => (
+                  {Services.Kitchen[0].split("\n").map((item, index) =>
                     // eslint-disable-next-line react/jsx-key
-                    <li>{item}</li>
-                  ))}
+                    index < 5 ? <li>{item}</li> : <></>
+                  )}
                 </ul>
               </div>
               <div className="imgCardService">
@@ -48,10 +24,10 @@ export default function ServiceCards() {
               <div>
                 <h3>Bathrooms</h3>
                 <ul>
-                  {services[1].split("\n").map((item) => (
+                  {Services.Bathrooms[0].split("\n").map((item, index) =>
                     // eslint-disable-next-line react/jsx-key
-                    <li>{item}</li>
-                  ))}
+                    index < 5 ? <li>{item}</li> : <></>
+                  )}
                 </ul>
               </div>
               <div className="imgCardService">
@@ -64,10 +40,10 @@ export default function ServiceCards() {
               <div>
                 <h3>Bedrooms</h3>
                 <ul>
-                  {services[2].split("\n").map((item) => (
+                  {Services.LivingSpaces[0].split("\n").map((item, index) =>
                     // eslint-disable-next-line react/jsx-key
-                    <li>{item}</li>
-                  ))}
+                    index < 5 ? <li>{item}</li> : <></>
+                  )}
                 </ul>
               </div>
               <div className="imgCardService">
@@ -80,10 +56,10 @@ export default function ServiceCards() {
               <div>
                 <h3>Living spaces / Dining rooms</h3>
                 <ul>
-                  {services[2].split("\n").map((item) => (
+                  {Services.LivingSpaces[0].split("\n").map((item, index) =>
                     // eslint-disable-next-line react/jsx-key
-                    <li>{item}</li>
-                  ))}
+                    index < 5 ? <li>{item}</li> : <></>
+                  )}
                 </ul>
               </div>
               <div className="imgCardService">

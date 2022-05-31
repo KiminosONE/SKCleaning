@@ -1,7 +1,8 @@
 import Image from "next/image"
 import ButtonPrimary from "../ButtonPrimary"
 
-export default function CardSlider({ srcImg, title }) {
+export default function CardSlider({ srcImg, title, content }) {
+  console.log(content)
   return (
     <>
       <div className="cardSlider">
@@ -12,9 +13,12 @@ export default function CardSlider({ srcImg, title }) {
 
           <h5>{title}</h5>
 
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          </p>
+          <ul>
+            {content.split("\n").map((item, index) =>
+              // eslint-disable-next-line react/jsx-key
+              index < 5 ? <li>{item}</li> : <></>
+            )}
+          </ul>
 
           <ButtonPrimary link="/" style={{ padding: "12px 20px" }}>
             GET STARTED
@@ -29,13 +33,19 @@ export default function CardSlider({ srcImg, title }) {
         }
 
         .cardSlider > div {
-          margin: 0 5%;
+          margin: 0 3%;
           background-color: white;
-          padding: 10% 8%;
+          padding: 8% 7%;
         }
 
         .cajaImg {
           width: 45%;
+        }
+
+        .cardSlider > div > ul {
+          list-style: disc;
+          padding: 0 0 0 9%;
+          margin: 0 0 6% 0;
         }
 
         h5 {

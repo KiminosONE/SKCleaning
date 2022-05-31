@@ -11,7 +11,7 @@ export default function Banners({ image }) {
         <div className="container">
           <article>
             <span className="onTitle">
-              spanroudly Serving Small to Large Size Facilities
+              proudly Serving Small to Large Size Facilities
             </span>
 
             <h1>SK Cleaning services LLC</h1>
@@ -19,7 +19,7 @@ export default function Banners({ image }) {
               SK Cleaning Services provides reliable and thorough residential
               and commercial cleaning services.
             </p>
-            <ButtonPrimary link="/">READ MORE</ButtonPrimary>
+            <ButtonPrimary link="/services">READ MORE</ButtonPrimary>
           </article>
         </div>
       </section>

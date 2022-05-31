@@ -1,53 +1,34 @@
-export default function ServicePackages() {
-  const goldPack = [
-    `Clean counters, sinks, faucets
-    - Clean inside cabinets 
-    - Clean appliance exteriors
-    - Clean inside refrigerator 
-    - Clean inside microwaves
-    - Clean stove top
-    - Inside oven
-    - Wash floor
-    - Windows
-    - Baseboards`,
-    `Scour sink, tub and toilet
-    - Clean tile 
-    - Clean mirrors
-    - Vacuum throw rugs
-    - Wash floor
-    - Windows 
-    - Baseboards
-    - Clean inside cabinets`,
-    `Dust
-    - Wash floors
-    - Vacuum carpets
-    - Change beds
-    - Windows
-    - Baseboards`,
-  ]
+export default function ServicePackages({ Services }) {
+  function ItemList(tipe, text) {
+    this.tipe = tipe
+    this.text = text
+  }
 
-  const silverPack = [
-    `Clean counters, sinks, faucets
-    - Clean appliance exteriors
-    - Clean inside microwaves
-    - Clean stove top
-    - Wash floor
-    - Windows
-    - Baseboards`,
-    `Scour sink, tub and toilet
-    - Clean tile 
-    - Clean mirrors
-    - Vacuum throw rugs
-    - Wash floor
-    -  Windows 
-    - Baseboards`,
-    `Dust
-    - Wash floors
-    - Vacuum carpets
-    - Change beds
-    - Windows
-    - Baseboards`,
-  ]
+  const printListServices = (arrayServices, serviceLevel = false) => {
+    const htmlInsert = []
+
+    const touringServices = (element, tipe) => {
+      element
+        .split("\n")
+        .map((item) => htmlInsert.push(new ItemList(tipe, item)))
+    }
+
+    if (serviceLevel) {
+      arrayServices.forEach((element, index) => {
+        touringServices(element, index)
+      })
+    } else {
+      touringServices(arrayServices[0], 0)
+    }
+
+    return htmlInsert.map((item) =>
+      item.tipe === 0 ? (
+        <li>{item.text}</li>
+      ) : (
+        <li style={{ color: "var(--color-tertiary)" }}>+ {item.text}</li>
+      )
+    )
+  }
 
   return (
     <>
@@ -69,26 +50,11 @@ export default function ServicePackages() {
                 </div>
                 <div>
                   <h4>KITCHEN</h4>
-                  <ul>
-                    {silverPack[0].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Kitchen)}</ul>
                   <h4>BATHROOMS</h4>
-                  <ul>
-                    {silverPack[1].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Bathrooms)}</ul>
                   <h4>BEDROOMS / LIVING SPACES DINING ROOMS</h4>
-                  <ul>
-                    {silverPack[2].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.LivingSpaces)}</ul>
                 </div>
               </article>
               <article className="goldPack">
@@ -100,26 +66,11 @@ export default function ServicePackages() {
                 </div>
                 <div>
                   <h4>KITCHEN</h4>
-                  <ul>
-                    {goldPack[0].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Kitchen, true)}</ul>
                   <h4>BATHROOMS</h4>
-                  <ul>
-                    {goldPack[1].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Bathrooms, true)}</ul>
                   <h4>BEDROOMS / LIVING SPACES DINING ROOMS</h4>
-                  <ul>
-                    {goldPack[2].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.LivingSpaces, true)}</ul>
                 </div>
               </article>
               <article className="bronzePack">
@@ -131,19 +82,9 @@ export default function ServicePackages() {
                 </div>
                 <div>
                   <h4>KITCHEN</h4>
-                  <ul>
-                    {silverPack[0].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Kitchen)}</ul>
                   <h4>BATHROOMS</h4>
-                  <ul>
-                    {silverPack[1].split("-").map((item) => (
-                      // eslint-disable-next-line react/jsx-key
-                      <li>{item}</li>
-                    ))}
-                  </ul>
+                  <ul>{printListServices(Services.Bathrooms)}</ul>
                 </div>
               </article>
             </div>
