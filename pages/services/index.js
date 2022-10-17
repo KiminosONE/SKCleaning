@@ -2,10 +2,13 @@ import AppLayout from "components/AppLayout"
 import BannerAlfa from "components/Banners/BannerAlfa"
 import ImgOnBanner from "components/Banners/ImgOnBanner"
 import ShapeDivider from "components/Banners/ShapeDivider"
-import ButtonPrimary from "components/ButtonPrimary"
-import ServiceCards from "components/ServiceCards"
-import ServicePackages from "components/ServicePackages"
+import ButtonPrimary from "components/Utils/ButtonPrimary"
+import ServicesCards from "components/Services/ServicesCards"
+import ServicesPacks from "components/Services/ServicesPacks"
+import SetScroll from "components/Utils/SetScroll"
 export default function Services({ Services }) {
+  SetScroll()
+
   return (
     <AppLayout
       title="Services"
@@ -45,8 +48,8 @@ export default function Services({ Services }) {
         }}
       />
 
-      <ServicePackages Services={Services} />
-      <ServiceCards Services={Services} />
+      <ServicesPacks Services={Services} />
+      <ServicesCards Services={Services} />
     </AppLayout>
   )
 }

@@ -1,11 +1,10 @@
-import AboutUsIndex from "components/IndexComponents/AboutUsIndex"
+import AboutUsIndex from "components/Index/AboutUsIndex"
 import AppLayout from "components/AppLayout"
 import Banners from "components/Banners"
-import ServicesIndex from "components/IndexComponents/ServicesIndex"
-import TestimonialIndex from "components/IndexComponents/TestimonialIndex"
+import ServicesIndex from "components/Index/ServicesIndex"
+import TestimonialIndex from "components/Index/TestimonialIndex"
 
 export default function Home({ Services }) {
-  console.log(Services)
   return (
     <AppLayout
       title="Home"

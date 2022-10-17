@@ -1,10 +1,16 @@
-import ButtonPrimary from "../ButtonPrimary"
+import ButtonPrimary from "../Utils/ButtonPrimary"
 import Image from "next/image"
+
+import { addDocMy } from "../../firebase/client"
 
 export default function AboutUsIndex() {
   const stylesButton = {
     width: "100%",
     "text-align": "center",
+  }
+
+  const pasadecosa = () => {
+    addDocMy({ name: "juan", lastName: "gomez" })
   }
 
   return (
@@ -30,7 +36,7 @@ export default function AboutUsIndex() {
               </p>
             </div>
             <div>
-              <div className="cont_imgTxt_aboutUs_index">
+              <div className="cont_imgTxt_aboutUs_index" onClick={pasadecosa}>
                 <Image
                   src="/images/firma.png"
                   layout="responsive"
@@ -44,17 +50,17 @@ export default function AboutUsIndex() {
 
           <ul>
             <li>
-              <ButtonPrimary link="/aboutUs?position=400" style={stylesButton}>
+              <ButtonPrimary link="/aboutUs?position=500" style={stylesButton}>
                 OUR HISTORY
               </ButtonPrimary>
             </li>
             <li>
-              <ButtonPrimary link="/aboutUs?position=900" style={stylesButton}>
+              <ButtonPrimary link="/aboutUs?position=1000" style={stylesButton}>
                 OUR VALUES
               </ButtonPrimary>
             </li>
             <li>
-              <ButtonPrimary link="/" style={stylesButton}>
+              <ButtonPrimary link="/aboutUs?position=1500" style={stylesButton}>
                 OUR PROCESS
               </ButtonPrimary>
             </li>

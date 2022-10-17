@@ -2,21 +2,11 @@ import AppLayout from "components/AppLayout"
 import BannerAlfa from "components/Banners/BannerAlfa"
 import ImgOnBanner from "components/Banners/ImgOnBanner"
 import ShapeDivider from "components/Banners/ShapeDivider"
-import SectionAboutUs from "components/SectionAboutUs"
-import { useRouter } from "next/router"
-import { useEffect } from "react"
+import AboutUsSections from "components/AboutUsSections"
+import SetScroll from "components/Utils/SetScroll"
 
 export default function AboutUs() {
-  const router = useRouter()
-
-  useEffect(() => {
-    if (router.query.position) {
-      window.scrollTo({
-        top: parseInt(router.query.position),
-        behavior: "smooth",
-      })
-    }
-  }, [])
+  SetScroll()
 
   return (
     <AppLayout
@@ -38,7 +28,7 @@ export default function AboutUs() {
         }}
       />
 
-      <SectionAboutUs
+      <AboutUsSections
         img="/images/pexels-polina-tankilevitch-4440627.jpg"
         data={[
           {
@@ -62,7 +52,7 @@ export default function AboutUs() {
           },
         ]}
       />
-      <SectionAboutUs
+      <AboutUsSections
         img="/images/pexels-andrea-piacquadio-3768910.jpg"
         data={[
           {
@@ -86,7 +76,7 @@ export default function AboutUs() {
         direction="row-reverse"
       />
 
-      <SectionAboutUs
+      <AboutUsSections
         img="/images/pexels-cottonbro-4107278.jpg"
         data={[
           {

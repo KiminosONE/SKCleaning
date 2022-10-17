@@ -1,8 +1,7 @@
 import Image from "next/image"
-import ButtonPrimary from "../ButtonPrimary"
+import ButtonPrimary from "../Utils/ButtonPrimary"
 
 export default function CardSlider({ srcImg, title, content }) {
-  console.log(content)
   return (
     <>
       <div className="cardSlider">
@@ -20,7 +19,10 @@ export default function CardSlider({ srcImg, title, content }) {
             )}
           </ul>
 
-          <ButtonPrimary link="/" style={{ padding: "12px 20px" }}>
+          <ButtonPrimary
+            link="/services?position=550"
+            style={{ padding: "12px 20px" }}
+          >
             GET STARTED
           </ButtonPrimary>
         </div>

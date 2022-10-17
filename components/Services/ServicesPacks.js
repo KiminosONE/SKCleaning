@@ -1,4 +1,4 @@
-export default function ServicePackages({ Services }) {
+export default function ServicesPacks({ Services }) {
   function ItemList(tipe, text) {
     this.tipe = tipe
     this.text = text

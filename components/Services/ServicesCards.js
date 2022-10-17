@@ -1,4 +1,4 @@
-export default function ServiceCards({ Services }) {
+export default function ServicesCards({ Services }) {
   return (
     <>
       <section>

@@ -1,4 +1,4 @@
-import ButtonPrimary from "components/ButtonPrimary"
+import ButtonPrimary from "components/Utils/ButtonPrimary"
 
 export default function Banners({ image }) {
   return (

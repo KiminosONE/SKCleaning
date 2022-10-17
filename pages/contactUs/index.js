@@ -3,7 +3,7 @@ import BannerAlfa from "components/Banners/BannerAlfa"
 import ContactCards from "components/Banners/ContactCards"
 import FormOnBanner from "components/Banners/FormOnBanner"
 import ShapeDivider from "components/Banners/ShapeDivider"
-import MapOffice from "components/MapOffice"
+import MapOffice from "components/Utils/MapOffice"
 export default function ContactUs() {
   return (
     <AppLayout
