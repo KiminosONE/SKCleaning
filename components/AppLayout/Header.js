@@ -58,7 +58,7 @@ export default function Header({ style }) {
       <style jsx>{`
         header {
           padding: 1.5% 0;
-          background-color: #ffffff00;
+          background-color: #ffff;
           position: fixed;
           z-index: 9;
           width: 100%;
@@ -66,7 +66,7 @@ export default function Header({ style }) {
         }
 
         .header_small {
-          background-color: #ffff;
+          background-color: #ffff !important;
           border-bottom: 1px solid #e3e3e3;
         }
 

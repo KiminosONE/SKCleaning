@@ -9,6 +9,7 @@ export default function Home({ Services }) {
     <AppLayout
       title="Home"
       description="pagina de inicio del citio web descripcion"
+      dataHeader={{ "background-color": "#ffffff00" }}
     >
       <Banners image="/images/Banners/revo-img-slider2-update.jpg" />
       <AboutUsIndex />

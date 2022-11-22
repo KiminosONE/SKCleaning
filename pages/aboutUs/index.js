@@ -12,7 +12,6 @@ export default function AboutUs() {
     <AppLayout
       title="About Us"
       description="pagina de inicio del citio web descripcion"
-      dataHeader={{ "background-color": "#ffff" }}
     >
       <BannerAlfa
         props={{
